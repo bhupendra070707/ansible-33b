@@ -1,0 +1,8 @@
+-
+  name: pb on yum example
+  hosts: client1
+  tasks:
+    - name: code to install git
+      yum:
+        name: git
+        state: present
