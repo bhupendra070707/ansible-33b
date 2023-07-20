@@ -1,0 +1,8 @@
+-
+  name: pb to install ifconfig
+  hosts: client1
+  tasks:
+    - name: code to install ifconfig
+      yum:
+        name: ifconfig
+        state: present
