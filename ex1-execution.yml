@@ -2,7 +2,7 @@
   name: pb to install ifconfig
   hosts: client1
   tasks:
-    - name: code to install ifconfig
+    - name: code to install ifconfig command
       yum:
-        name: ifconfig
+        name: net-tools
         state: present
