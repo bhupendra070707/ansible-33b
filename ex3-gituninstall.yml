@@ -1,0 +1,8 @@
+-
+  name: pb on yum example
+  hosts: client1
+  tasks:
+    - name: code to uninstall git
+      yum:
+        name: git
+        state: absent
