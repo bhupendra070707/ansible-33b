@@ -1,0 +1,15 @@
+-
+  name: pb on cammond module
+  hosts: client1
+  tasks:
+    - name: code to create a folder
+      command:
+        cmd: mkdir /opt/RUSSIA
+
+    - name: code to create a file under that folder
+      command:
+        cmd: touch /opt/RUSSIA/Sample1
+
+    - name: code to remove git app
+      command:
+        cmd: yum remove -y git
