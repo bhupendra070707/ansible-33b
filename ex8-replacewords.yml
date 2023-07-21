@@ -1,0 +1,10 @@
+-
+  name: pb on lineinfile module
+  hosts: client1
+  tasks:
+    - name: replace word 
+      lineinfile:
+        path: /opt/India/Russia.txt
+        state: present
+        regexp: 'HELLO WORLD'
+        line: 'India is greate'
