@@ -1,19 +1,20 @@
 -
   name: pb on use case of variable concept
-  hosts: clinet1
-  var:
+  hosts: all
+  vars:
     a: 10
     b: 20.50
-    c: "ap05dc0505"
-    d: "well come"
+    c: "INDIA IS GREATE"
+    d: "AP28DC0505"
   tasks:
-    - name: code to create a file
+    - name: code to create file
       file:
         path: /opt/variable.txt
         state: touch
-      
-    - name: code to write a message into file
+
+    - name: code to write message into file
       lineinfile:
         path: /opt/variable.txt
         state: present
         line: "The value of a is {{a}} and b is {{b}} and c is {{c}} and d is {{d}}"
+
