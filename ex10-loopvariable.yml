@@ -1,0 +1,24 @@
+-
+  name: pb to use case of variable concept
+  hosts: all
+  vars:
+    a: 10
+    b: 30.156
+    c: "devops"
+    d: "MH31cy2047"
+  tasks:
+    - name: code to create a directory
+      file:
+      path: /opt/var-concept
+      state: directory
+
+    - name: code to create a file data.txt
+      file:
+        path: /opt/var-concept/data.txt
+        state: touch
+
+    - name: code to write a message into the file
+      lineinfile:
+        path: /opt/var-concept/data.txt
+        state: present
+        line: "The value of a is {{a}} \n The value of b is {{b}} \n The value of c is {{c}} \n The value of d is {{d}}"
