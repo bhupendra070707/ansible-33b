@@ -1,5 +1,5 @@
 -
-  name: pb on loop variable
+  name: pb on use case of variable concept
   hosts: clinet1
   var:
     a: 10
